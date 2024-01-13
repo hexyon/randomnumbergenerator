@@ -7,12 +7,13 @@
         body {
             background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Dark gradient background */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #ffffff;
+            color: #E0E0E0; /* Brighter text color for better legibility */
             font-size: 18px;
         }
 
@@ -21,20 +22,21 @@
             border-radius: 20px;
             padding: 10px 20px;
             font-size: 20px;
-            background-color: #007AFF;
-            color: white;
+            background-color: #1A2836; /* Pacific Blue inspired by Apple */
+            color: #FAFAFA; /* Brighter text color for better legibility */
             cursor: pointer;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             margin-top: 10px;
         }
 
         button:hover {
-            background-color: #0051FF;
+            background-color: #194FDA; /* Black on hover */
         }
 
         p {
             font-size: 24px;
             text-align: center;
+            color: #E0E0E0; /* Brighter text color for better legibility */
         }
 
         #tick {
@@ -49,7 +51,7 @@
         <button id="generateButton" onclick="displayRandomNumber()">Generate Random Number</button>
         <p id="randomNumber"></p>
         <button id="copyButton" onclick="copyToClipboard()">Copy</button>
-        <span id="tick">&#10003;</span>
+        <span id="tick">✓</span>
     </div>
 
     <script src="randomNumberGenerator.js"></script>
