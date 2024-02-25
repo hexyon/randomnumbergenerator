@@ -11,14 +11,13 @@ function displayRandomNumber() {
 }
 
 function copyToClipboard() {
-    let tempInput = document.createElement("input");
-    tempInput.value = document.getElementById("copyButton").dataset.number;
+    var randomNumber = document.getElementById('randomNumber').textContent;
+    var tempInput = document.createElement('input');
+    tempInput.style = 'position: absolute; left: -1000px; top: -1000px';
+    tempInput.value = randomNumber;
     document.body.appendChild(tempInput);
     tempInput.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
     document.body.removeChild(tempInput);
-    document.getElementById("tick").style.visibility = "visible";
-    setTimeout(function() {
-        document.getElementById("tick").style.visibility = "hidden";
-    }, 2000);
+    document.getElementById('copiedNumber').textContent = randomNumber;
 }
